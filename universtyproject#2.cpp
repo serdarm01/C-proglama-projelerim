@@ -7,7 +7,7 @@ int main()
 	setlocale(LC_ALL,"Turkish");
 	int i,j,ha=3,hb=3,hc=3,k,x=1,h=1,c=1,z=0,w=0;
 	char m[10][4],mt[4][10];
-    printf("Oyun hakkında bilgiler:\n1.kırılabilir camlar K ile gösterilmiştir\n2.Kırılıp kullanılamaz olan camlar D ile gösterilmiştir\n3.Sağlam camlar S ile gösterilmiştir\n4.Oyuncu sırası A,B,C şeklindedir\n\n");
+    printf("Oyun hakkÄ±nda bilgiler:\n1.kÄ±rÄ±labilir camlar K ile gÃ¶sterilmiÅŸtir\n2.KÄ±rÄ±lÄ±p kullanÄ±lamaz olan camlar D ile gÃ¶sterilmiÅŸtir\n3.SaÄŸlam camlar S ile gÃ¶sterilmiÅŸtir\n4.Oyuncu sÄ±rasÄ± A,B,C ÅŸeklindedir\n\n");
 	srand(time(NULL));
 for(i=0;i<10;i++)
 {
@@ -33,7 +33,7 @@ for(i=0;i<10;i++)
         }
         printf("\n");
     }
-    printf("\nOyun başlamıştır:\n\n");
+    printf("\nOyun baÅŸlamÄ±ÅŸtÄ±r:\n\n");
     aoyuncusu:
     	 	if(ha==0&&hb==0&&hc==0)
 	{
@@ -52,7 +52,7 @@ for(i=0;i<10;i++)
         {
         	goto ayeniden;
 		}
-    	printf("A oyuncus %d.sütun %d.basamağındadır\n",x,k+1);
+    	printf("A oyuncus %d.sÃ¼tun %d.basamaÄŸÄ±ndadÄ±r\n",x,k+1);
 		mt[k][x-1]='A';
     	for(i=0;i<4;i++)
     	{
@@ -67,7 +67,7 @@ for(i=0;i<10;i++)
          {
          	mt[k][x-1]='D';
          	ha=ha-1;
-         	printf("Basamak kırıldı\n");
+         	printf("Basamak kÄ±rÄ±ldÄ±\n");
          	x=1;
          	z=z+4;
          	goto boyuncusu;
@@ -102,7 +102,7 @@ for(i=0;i<10;i++)
         {
         	goto byeniden;
 		}
-    	printf("B oyuncus %d.sütun %d.basamağındadır\n",h,k+1);
+    	printf("B oyuncus %d.sÃ¼tun %d.basamaÄŸÄ±ndadÄ±r\n",h,k+1);
 		mt[k][h-1]='B';
     	for(i=0;i<4;i++)
     	{
@@ -117,7 +117,7 @@ for(i=0;i<10;i++)
          {
          	mt[k][h-1]='D';
          	hb=hb-1;
-         	printf("Basamak kırıldı\n");
+         	printf("Basamak kÄ±rÄ±ldÄ±\n");
          	h=1;
          	w=w+3;
          	goto coyuncusu;
@@ -151,7 +151,7 @@ for(i=0;i<10;i++)
         {
         	goto cyeniden;
 		}
-    	printf("C oyuncus %d.sütun %d.basamağındadır\n",c,k+1);
+    	printf("C oyuncus %d.sÃ¼tun %d.basamaÄŸÄ±ndadÄ±r\n",c,k+1);
 		mt[k][c-1]='C';
     	for(i=0;i<4;i++)
     	{
@@ -166,7 +166,7 @@ for(i=0;i<10;i++)
          {
          	mt[k][c-1]='D';
          	hc=hc-1;
-         	printf("Basamak kırıldı\n");
+         	printf("Basamak kÄ±rÄ±ldÄ±\n");
          	c=1;
          	goto aoyuncusu;
 		 }
@@ -179,7 +179,7 @@ for(i=0;i<10;i++)
 		 {
 		 if(ha>0&&hb>0&&hc>0)
 		 	{
-		 	printf("Tüm oyuncular aynı sütündadır A B C sırasıyla oyuna devam edecektir\n");
+		 	printf("TÃ¼m oyuncular aynÄ± sÃ¼tÃ¼ndadÄ±r A B C sÄ±rasÄ±yla oyuna devam edecektir\n");
 		    }
 		 	if(x==9)
 		 	{
@@ -195,11 +195,11 @@ for(i=0;i<10;i++)
 	 	{
 	 		if(ha>0&&hb>0)
 	 		{
-	 		printf("A ile B oyuncuları çakışmıştır A oyuncusu bir sonraki basamağa atlamıştır\n");
+	 		printf("A ile B oyuncularÄ± Ã§akÄ±ÅŸmÄ±ÅŸtÄ±r A oyuncusu bir sonraki basamaÄŸa atlamÄ±ÅŸtÄ±r\n");
 	 		x++;
 	 		if(x==c)
 	 		{
-	 			printf("A bir sonraki basamakda C ile çakışmıştır\n");
+	 			printf("A bir sonraki basamakda C ile Ã§akÄ±ÅŸmÄ±ÅŸtÄ±r\n");
 	 			x++;
 			 }
 			 goto devam;
@@ -209,12 +209,12 @@ for(i=0;i<10;i++)
 		 {
 		 	if(ha>0&&hc>0)
 		 	{
-		 printf("A ile C oyuncuları çakışmıştır A oyuncusu bir sonraki basamağa atlamıştır\n");
+		 printf("A ile C oyuncularÄ± Ã§akÄ±ÅŸmÄ±ÅŸtÄ±r A oyuncusu bir sonraki basamaÄŸa atlamÄ±ÅŸtÄ±r\n");
 		 x++;
 		 z+3;
 		 if(x==h)
 		 {
-		 	printf("A oyuncusu B nin olduğu sütuna geçmiştir bu nedenle A B nin önünden başlar\n");
+		 	printf("A oyuncusu B nin olduÄŸu sÃ¼tuna geÃ§miÅŸtir bu nedenle A B nin Ã¶nÃ¼nden baÅŸlar\n");
 		 	x++;
 		 }
 	        }
@@ -223,7 +223,7 @@ for(i=0;i<10;i++)
 		 {
 		 	if(hb>0&&hc>0)
 		 	{
-		 	printf("B ve C oyuncusu çakışmıştır B oyuncusu bir sonraki satıra atlamıştır\n");
+		 	printf("B ve C oyuncusu Ã§akÄ±ÅŸmÄ±ÅŸtÄ±r B oyuncusu bir sonraki satÄ±ra atlamÄ±ÅŸtÄ±r\n");
 		 	h++;
 		    }
 		 }
@@ -237,17 +237,17 @@ for(i=0;i<10;i++)
 		    printf("A=%d B=%d C=%d\n",ha,hb,hc);
 		   if(ha==0)
     	 {
-         printf("A oyuncusu elenmiştir\n");
+         printf("A oyuncusu elenmiÅŸtir\n");
          }
 		if(hb==0)
     	{
-    	printf("B oyuncusu elenmiştir\n");
+    	printf("B oyuncusu elenmiÅŸtir\n");
 		}
 		if(hc==0)
     	{
-    		printf("C oyuncusu elenmiştir\n");
+    		printf("C oyuncusu elenmiÅŸtir\n");
 		}
-			printf("A oyuncusu kazanmıştır");
+			printf("A oyuncusu kazanmÄ±ÅŸtÄ±r");
 		}
 		bsonuc:
 		if(h==10)
@@ -255,17 +255,17 @@ for(i=0;i<10;i++)
 			printf("A=%d B=%d C=%d\n",ha,hb,hc);
 			 if(ha==0)
     	{
-    	printf("A oyuncusu elenmiştir\n");
+    	printf("A oyuncusu elenmiÅŸtir\n");
         }
 		if(hb==0)
     	{
-    	printf("B oyuncusu elenmiştir\n");
+    	printf("B oyuncusu elenmiÅŸtir\n");
 		}
 		if(hc==0)
     	{
-    		printf("C oyuncusu elenmiştir\n");
+    		printf("C oyuncusu elenmiÅŸtir\n");
 		}
-			printf("B oyuncusu kazanmıştır");
+			printf("B oyuncusu kazanmÄ±ÅŸtÄ±r");
 		}
 		csonuc:
 		if(c==10)
@@ -273,22 +273,22 @@ for(i=0;i<10;i++)
 		 printf("A=%d B=%d C=%d\n",ha,hb,hc);
 		  if(ha==0)
     	{
-    	printf("A oyuncusu elenmiştir\n");
+    	printf("A oyuncusu elenmiÅŸtir\n");
         }
 		if(hb==0)
     	{
-    	printf("B oyuncusu elenmiştir\n");
+    	printf("B oyuncusu elenmiÅŸtir\n");
 		}
 		if(hc==0)
     	{
-    		printf("C oyuncusu elenmiştir\n");
+    		printf("C oyuncusu elenmiÅŸtir\n");
 		}
-		 printf("C oyuncusu kazanmıştır");
+		 printf("C oyuncusu kazanmÄ±ÅŸtÄ±r");
 		}
 		elenme:
 			if(ha==0&&hb==0&&hc==0)
 	{
-		printf("\nTüm oyuncular elenmiştir\n");
+		printf("\nTÃ¼m oyuncular elenmiÅŸtir\n");
 	}
     return 0;
 }
